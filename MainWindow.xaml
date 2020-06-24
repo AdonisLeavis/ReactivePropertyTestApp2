@@ -1,0 +1,32 @@
+﻿<Window x:Class="ReactivePropertyTestApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ReactivePropertyTestApp2"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="242.035"
+        Height="234.069"
+        mc:Ignorable="d">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    <StackPanel>
+        <Button Width="75"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Command="{Binding ChangeCanExecute}"
+                Content="ChangeCanExecute" />
+
+        <Button Width="75"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Command="{Binding Command1}"
+                Content="Command1" />
+        <Button Width="75"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Command="{Binding Command2}"
+                Content="Command2" />
+    </StackPanel>
+</Window>
